@@ -29,13 +29,11 @@ const Landing = () => {
     const searchHandler = event => {
         setSearch(event.target.value);
     }
-
-    console.log(coins)
-
     const searchedCoins = coins.filter(coin => coin.name.toLowerCase().includes(search.toLowerCase()));
 
     return (
         <div className={styles.container}>
+            <p style={{textAlign : 'center' , marginTop : '15px'}}>Made by <a href="https://github.com/javadevbh/" target="blank">Javad Bahrami</a>&#127775;</p>
             <input className={styles.input} type='text' placeholder='Search coins' value={search} onChange={searchHandler}/>
             <div className={styles.coinsContainer}>
                 {   coins.length ?
@@ -49,7 +47,7 @@ const Landing = () => {
                         priceChange={coin.price_change_percentage_24h}
                         marketCap={coin.market_cap}
                     />):
-                    <img src={loader} alt="loader" />
+                    <img className={styles.loader} src={loader} alt="loader" />
                 }
             </div>
         </div>

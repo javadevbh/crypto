@@ -20,3 +20,9 @@
     margin: 50px auto;
     overflow: hidden;
 }
+
+@media (max-width : 800px){
+    .loader{
+        width: 330px;
+    }
+}
