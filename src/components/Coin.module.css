@@ -1,0 +1,48 @@
+.coinContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid silver;
+    padding: 15px 40px;
+}
+.coinContainer:nth-child(odd){
+    background-color: #F3F5F8;
+}
+.coinContainer img{
+    width: 35px;
+}
+.coinContainer span{
+    width: 127px;
+    text-align: left;
+}
+.coinName{
+    width: 140px;
+    margin-left: 15px;
+    font-weight: bold;
+    text-align: left;
+}
+
+.highGreen{
+    color:#38b000;
+    font-weight: bold;
+}
+.mediumGreen{
+    color: #70e000;
+    font-weight: bold;
+}
+.lowGreen{
+    color: #9ef01a;
+    font-weight: bold;
+}
+.highRed{
+    color:#bd1f36;
+    font-weight: bold;
+}
+.mediumRed{
+    color: #da1e37;
+    font-weight: bold;
+}
+.lowRed{
+    color: #ef233c;
+    font-weight: bold;
+}

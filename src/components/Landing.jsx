@@ -9,6 +9,9 @@ import loader from '../assets/loader.gif'
 //Components
 import Coin from './Coin';
 
+//Styles
+import styles from './Landing.module.css';
+
 const Landing = () => {
 
     const [coins , setCoins] = useState([]);
@@ -27,23 +30,28 @@ const Landing = () => {
         setSearch(event.target.value);
     }
 
+    console.log(coins)
+
     const searchedCoins = coins.filter(coin => coin.name.toLowerCase().includes(search.toLowerCase()));
 
     return (
-        <div>
-            <input type='text' placeholder='Search' value={search} onChange={searchHandler}/>
-            {   coins.length ?
-                searchedCoins.map(coin => <Coin
-                    key={coin.id}
-                    name={coin.name}
-                    image={coin.image}
-                    symbol={coin.symbol}
-                    price={coin.current_price}
-                    marketCap={coin.market_cap}
-                    priceChange={coin.price_change_percentage_24}
-                />):
-                <img src={loader} alt="loader" />
-            }
+        <div className={styles.container}>
+            <input className={styles.input} type='text' placeholder='Search coins' value={search} onChange={searchHandler}/>
+            <div className={styles.coinsContainer}>
+                {   coins.length ?
+                    searchedCoins.map(coin => 
+                    <Coin
+                        key={coin.id}
+                        name={coin.name}
+                        image={coin.image}
+                        symbol={coin.symbol}
+                        price={coin.current_price}
+                        priceChange={coin.price_change_percentage_24h}
+                        marketCap={coin.market_cap}
+                    />):
+                    <img src={loader} alt="loader" />
+                }
+            </div>
         </div>
     );
 };
