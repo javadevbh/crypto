@@ -1,5 +1,8 @@
 import React, { useEffect, useState } from 'react';
 
+//Skeleton
+import CoinSkeleton from './CoinSkeleton';
+
 //API
 import { getCoins } from '../services/api';
 
@@ -67,7 +70,7 @@ const Landing = () => {
                         priceChange={coin.price_change_percentage_24h}
                         marketCap={coin.market_cap}
                     />):
-                    <img className={styles.loader} src={loader} alt="loader" />
+                    <CoinSkeleton coins={20}/>
                 }
             </div>
         </div>
