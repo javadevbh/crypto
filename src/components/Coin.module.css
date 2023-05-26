@@ -16,8 +16,12 @@
     width: 127px;
     text-align: left;
 }
+.symbol{
+    font-size: 11.2px;
+    color: #6b7280;
+}
 .marketCap::before{
-    content: "$ ";
+    content: "$";
 }
 .coinName{
     width: 140px;
@@ -72,8 +76,5 @@
     .coinContainer span{
         font-size: 10px;
         text-align: center;
-    }
-    .marketCap::before{
-        content: "$";
     }
 }
