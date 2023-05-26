@@ -1,5 +1,5 @@
 <div>
-  <img src="![Screenshot (96)](https://github.com/javadevbh/crypto/assets/122552232/014d00d1-2692-4b13-91f6-f4f996250639)">
+  <img src="https://github.com/javadevbh/crypto/assets/122552232/014d00d1-2692-4b13-91f6-f4f996250639">
 </div>
 
 ---
