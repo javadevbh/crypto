@@ -3,7 +3,7 @@
 </div>
 
 ---
-# A cryptocurrency information website with search and coin filtering capabilities.
+## A cryptocurrency information website with search and coin filtering capabilities.
 ## [review online](https://javadbahrami-crypto.netlify.app/)
 ---
 ## tips
