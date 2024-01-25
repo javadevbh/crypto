@@ -1,14 +1,12 @@
-import React from 'react';
-
 //Components
-import Landing from './components/Landing';
+import HomePage from "./templates/HomePage";
 
-const App = () => {
+function App() {
   return (
-    <>
-      <Landing/>
-    </>
+    <div>
+      <HomePage />
+    </div>
   );
-};
+}
 
 export default App;
