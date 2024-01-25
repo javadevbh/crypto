@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 //APIs
-import { getCoinList } from "../services/cryptoAPI";
+import { getCoinList } from "../../services/cryptoAPI";
 
 //Components
 import TableCoin from "../modules/TableCoin";

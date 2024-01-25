@@ -1,5 +1,5 @@
 //Components
-import HomePage from "./templates/HomePage";
+import HomePage from "./components/templates/HomePage";
 
 function App() {
   return (
