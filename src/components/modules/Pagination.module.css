@@ -1,0 +1,37 @@
+.paginationContainer {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin: 80px 0;
+  justify-content: center;
+}
+
+.paginationContainer button {
+  background-color: #3874ff;
+  border: none;
+  color: #fff;
+  padding: 5px 0;
+  width: 80px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.paginationContainer p {
+  border: 1px solid #3874ff;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.disable {
+  opacity: 0.6;
+}
+
+.selected {
+  background-color: #3874ff;
+}
