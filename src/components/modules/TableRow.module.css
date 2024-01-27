@@ -1,0 +1,22 @@
+.symbol {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.symbol img {
+  width: 20px;
+}
+
+.symbol span {
+  color: rgb(174, 173, 173);
+}
+
+.ascending {
+  color: #57bc7c;
+}
+
+.descending {
+  color: #d33636;
+}

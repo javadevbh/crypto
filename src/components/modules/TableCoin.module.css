@@ -1,0 +1,43 @@
+.container {
+  display: flex;
+  justify-content: center;
+  max-width: 1200px;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table thead {
+  border-bottom: 2px solid #fff;
+  margin-bottom: 20px;
+}
+
+.table thead tr {
+  height: 50px;
+}
+
+.table thead tr th {
+  text-align: left;
+}
+
+.table tbody tr {
+  height: 80px;
+  border-bottom: 1px solid #22262e;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+/* Media queries */
+
+@media (max-width: 600px) {
+  .table {
+    display: block;
+    overflow-x: scroll;
+  }
+  .table td,
+  .table th {
+    padding: 0 10px;
+  }
+}
