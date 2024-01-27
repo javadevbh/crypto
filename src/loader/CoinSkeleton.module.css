@@ -1,0 +1,32 @@
+.coinSkeleton {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  border-bottom: 1px solid #22262e;
+  padding: 15px 40px;
+  width: 100%;
+}
+.coinSkeleton .row {
+  width: 625px;
+  margin-left: 20px;
+}
+@media (max-width: 770px) {
+  .coinSkeleton {
+    width: 500px;
+    padding: 10px 15px;
+  }
+  .coinSkeleton span:nth-child(1) {
+    width: 415px;
+  }
+}
+@media (max-width: 500px) {
+  .coinSkeleton {
+    width: 350px;
+  }
+  .coinSkeleton span:first-child {
+    width: 30px;
+  }
+  .coinSkeleton span:nth-child(1) {
+    width: 265px;
+  }
+}
