@@ -1,0 +1,10 @@
+.coinSkeleton {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #22262e;
+  padding: 10px 0 5px 0;
+}
+.coinSkeleton .row {
+  width: 100px;
+  margin-left: 10px;
+}

@@ -7,7 +7,7 @@ import styles from "./TableCoin.module.css";
 import TableRow from "./TableRow";
 
 //Skeleton Loader
-import CoinSkeleton from "../../loader/CoinSkeleton";
+import CoinSkeleton from "../../loaders/CoinSkeleton";
 
 function TableCoin({ coins, isLoading , currency }) {
   return (
