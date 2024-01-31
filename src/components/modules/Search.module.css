@@ -39,6 +39,7 @@
   border-radius: 5px;
   top: 50px;
   overflow-y: scroll;
+  animation: showResultBox 1s;
 }
 
 .searchResult ul {
@@ -56,4 +57,16 @@
 ::-webkit-scrollbar {
   width: 0;
   background: transparent;
+}
+
+/* Animation */
+@keyframes showResultBox {
+  from{
+    transform: translateY(-20px);
+    opacity: .5;
+  }
+  to{
+    transform: translateY(0);
+    opacity: 1;
+  }
 }

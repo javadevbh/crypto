@@ -9,7 +9,7 @@ import TableRow from "./TableRow";
 //Skeleton Loader
 import CoinSkeleton from "../../loaders/CoinSkeleton";
 
-function TableCoin({ coins, isLoading , currency }) {
+function TableCoin({ coins, isLoading , currency , setChart }) {
   return (
     <>
       {isLoading ? (
@@ -29,7 +29,7 @@ function TableCoin({ coins, isLoading , currency }) {
             </thead>
             <tbody>
               {coins.map((coin) => (
-                <TableRow coin={coin} key={coin.id} currency={currency} />
+                <TableRow coin={coin} key={coin.id} currency={currency} setChart={setChart} />
               ))}
             </tbody>
           </table>

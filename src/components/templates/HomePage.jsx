@@ -9,6 +9,7 @@ import { getCoinList } from "../../services/cryptoAPI";
 import TableCoin from "../modules/TableCoin";
 import Pagination from "../modules/Pagination";
 import Search from "../modules/Search";
+import Chart from "../modules/Chart";
 
 //Helpers
 import notify from "../../helpers/toastify";
@@ -18,6 +19,7 @@ function HomePage() {
   const [isLoading, setIsLoading] = useState(true);
   const [page, setPage] = useState(1);
   const [currency, setCurrency] = useState("usd");
+  const [chart, setChart] = useState(null);
 
   useEffect(() => {
     setIsLoading(true);
@@ -28,7 +30,7 @@ function HomePage() {
         setCoins(json);
         setIsLoading(false);
       } catch (error) {
-        notify(error.message)
+        notify(error.message);
       }
     };
     getData();
@@ -36,9 +38,10 @@ function HomePage() {
   return (
     <>
       <Search currency={currency} setCurrency={setCurrency} />
-      <TableCoin coins={coins} isLoading={isLoading} currency={currency} />
+      <TableCoin coins={coins} isLoading={isLoading} currency={currency} setChart={setChart} />
       <Pagination setPage={setPage} page={page} />
-      <ToastContainer/>
+      <ToastContainer />
+      {!!chart && <Chart chart={chart} setChart={setChart} />}
     </>
   );
 }
