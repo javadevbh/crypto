@@ -34,10 +34,10 @@ function Search({ currency, setCurrency }) {
           setCoins(json.coins);
           setIsLoading(false);
         } else {
-          notify(json.status.error_message);
+          notify(json.status.error_message,"error");
         }
       } catch (error) {
-        if (error.name != "AbortError") notify(error.message);
+        if (error.name != "AbortError") notify(error.message,"error");
       }
     };
     fetchCoins(text);
@@ -74,7 +74,7 @@ function Search({ currency, setCurrency }) {
           ))}
         </ul>
       </div>
-      <ToastContainer />
+      <ToastContainer theme="dark" />
     </div>
   );
 }

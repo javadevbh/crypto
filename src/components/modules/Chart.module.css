@@ -7,6 +7,7 @@
   left: 0;
   padding: 20px;
   animation: showModal 1s;
+  overflow-x: scroll;
 }
 
 .closeBtn {

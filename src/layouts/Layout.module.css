@@ -16,5 +16,12 @@
 }
 
 .footer a {
-    color: #3874ff;
+  color: #3874ff;
+}
+
+/* Media queries */
+@media (max-width: 425px) {
+  .header h1 {
+    font-size: 25px;
+  }
 }

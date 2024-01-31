@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   CartesianGrid,
   Legend,
@@ -9,6 +9,8 @@ import {
   XAxis,
   YAxis,
 } from "recharts";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 //Styles
 import styles from "./Chart.module.css";
@@ -16,10 +18,17 @@ import styles from "./Chart.module.css";
 //Helpers
 import { convertData } from "../../helpers/convertData";
 import { currencySymbol } from "../../helpers/currencySymbol";
+import notify from "../../helpers/toastify";
 
 function Chart({ chart, setChart, currency }) {
   const [type, setType] = useState("prices");
   const { name, image, ath, current_price, market_cap } = chart.coin;
+
+  useEffect(() => {
+    if (window.screen.width <= 430) {
+      notify("Rotate 🔄️ your phone for a better experience");
+    }
+  }, []);
 
   //Handlers
   const typeHandler = (event) => {
@@ -79,6 +88,7 @@ function Chart({ chart, setChart, currency }) {
           </p>
         </footer>
       </div>
+      <ToastContainer theme="dark" />
     </div>
   );
 }

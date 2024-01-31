@@ -30,7 +30,7 @@ function HomePage() {
         setCoins(json);
         setIsLoading(false);
       } catch (error) {
-        notify(error.message);
+        notify(error.message,"error");
       }
     };
     getData();
@@ -40,8 +40,8 @@ function HomePage() {
       <Search currency={currency} setCurrency={setCurrency} />
       <TableCoin coins={coins} isLoading={isLoading} currency={currency} setChart={setChart} />
       <Pagination setPage={setPage} page={page} />
-      <ToastContainer />
       {!!chart && <Chart chart={chart} setChart={setChart} currency={currency}/>}
+      <ToastContainer theme="dark" />
     </>
   );
 }
