@@ -41,7 +41,7 @@ function HomePage() {
       <TableCoin coins={coins} isLoading={isLoading} currency={currency} setChart={setChart} />
       <Pagination setPage={setPage} page={page} />
       <ToastContainer />
-      {!!chart && <Chart chart={chart} setChart={setChart} />}
+      {!!chart && <Chart chart={chart} setChart={setChart} currency={currency}/>}
     </>
   );
 }

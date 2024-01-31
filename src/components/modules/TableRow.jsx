@@ -10,8 +10,11 @@ import styles from "./TableRow.module.css";
 import chartUp from "../../assets/chart-up.svg";
 import chartDown from "../../assets/chart-down.svg";
 
-function TableRow({
-  coin: {
+//Helpers
+import { currencySymbol } from "../../helpers/currencySymbol";
+
+function TableRow({ currency, setChart, coin }) {
+  const {
     id,
     image,
     symbol,
@@ -19,33 +22,20 @@ function TableRow({
     current_price,
     price_change_percentage_24h: price_change,
     total_volume,
-  },
-  currency,
-  setChart,
-}) {
+  } = coin;
   //Handlers
   const showChartHandler = () => {
-    setChart(true);
     const fetchMarketChart = async (id) => {
       try {
         const res = await fetch(marketChartCoin(id));
         const json = await res.json();
-        console.log(json);
+        setChart({ ...json, coin });
       } catch (error) {
+        setChart(null);
         console.log(error.message);
       }
     };
     fetchMarketChart(id);
-  };
-
-  const currencySymbol = (currency) => {
-    if (currency == "usd") {
-      return "$";
-    } else if (currency == "eur") {
-      return "€";
-    } else {
-      return "¥";
-    }
   };
   return (
     <tr>
@@ -63,7 +53,10 @@ function TableRow({
       <td className={price_change > 0 ? styles.ascending : styles.descending}>
         {price_change.toFixed(2)}%
       </td>
-      <td>{total_volume.toLocaleString()}</td>
+      <td>
+        {currencySymbol(currency)}
+        {total_volume.toLocaleString()}
+      </td>
       <td>
         <img src={price_change > 0 ? chartUp : chartDown} alt="change chart" />
       </td>
