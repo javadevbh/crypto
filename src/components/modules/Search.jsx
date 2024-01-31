@@ -69,6 +69,7 @@ function Search({ currency, setCurrency }) {
             <li key={coin.id}>
               <img src={coin.thumb} alt={coin.name} />
               <p>{coin.name}</p>
+              <span title="Market Cap Rank">#{coin.market_cap_rank}</span>
             </li>
           ))}
         </ul>

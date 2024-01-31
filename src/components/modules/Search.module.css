@@ -54,6 +54,10 @@
   border-bottom: 2px solid #23242e;
 }
 
+.searchResult ul li span {
+  color:#434656 ;
+}
+
 ::-webkit-scrollbar {
   width: 0;
   background: transparent;
