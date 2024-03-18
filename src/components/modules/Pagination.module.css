@@ -1,7 +1,7 @@
 .paginationContainer {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 12px;
   margin: 80px 0;
   justify-content: center;
 }
@@ -34,4 +34,10 @@
 
 .selected {
   background-color: #3874ff;
+}
+
+@media (max-width: 600px) {
+  .paginationContainer {
+    gap: 8px;
+  }
 }
